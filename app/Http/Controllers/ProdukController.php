@@ -20,7 +20,7 @@ class ProdukController extends Controller
     {
         $isAdmin = Auth::user()->role == 'admin';
 
-        $produk = $isAdmin ? Produk::all() : Produk::where('user_id', Auth::user()->id)->get; //mengambil semua data di tabel produk
+        $produk = $isAdmin ? Produk::all() : Produk::where('user_id', Auth::user()->id)->get(); //mengambil semua data di tabel produk
 
         return view('produk', ['produk' => $produk]); //menampilkan view dari produk.blade.php dengan membawa variabel Sproduk
     }
@@ -87,9 +87,11 @@ class ProdukController extends Controller
 
     public function ViewLaporan()
     {
+        $isAdmin = Auth::user()->role == 'admin';
         //Mengambil semua data produk
-        $products = Produk::all();
-        return view('laporan', ['products' => $products]);
+        $laporan = $isAdmin ? Produk::all() : Produk::where('user_id', Auth::user()->id)->get();
+
+        return view('laporan', ['products' => $laporan]);
     }
 
     public function print()

@@ -53,7 +53,7 @@
                         <button type="submit" class="btn btn-primary">Edit</button>
                     </form>
                     <form action="{{url(Auth::user()->role.'/produk/delete/'. $item->kode_produk)}}" method="POST">
-                        @csrf
+                        @csrf 
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Delete</button>
                     </form>

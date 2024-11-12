@@ -15,7 +15,7 @@ body {
     background-color: #2c3e50;
     color: white;
     padding: 20px;
-    height: auto;
+    height: 114vh;
 }
 
 .sidebar h2 {
@@ -128,7 +128,7 @@ header h1 {
     margin-bottom: 15px;
 }
 
-.card-button{
+.card-button {
     background-color: #8dc8ef;
     color: white;
     border: none;
@@ -136,7 +136,6 @@ header h1 {
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
-
 }
 
 .card-button:hover {

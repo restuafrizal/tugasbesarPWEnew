@@ -23,7 +23,6 @@ class UserAccessMiddleware
                 return $next($request);
             }
 
-
             if (Auth::user()->role == $userType) {
                 return $next($request);
             }
